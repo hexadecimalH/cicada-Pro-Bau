@@ -1,0 +1,82 @@
+{% include 'shared/header.twig' with {'style': style} %}
+    <body ng-app="proApp" ng-controller="proCtrl">
+        <div class="container-fluid" id="firstCont">
+            <div class="row">
+                {% include 'shared/navigation.twig' %}
+                <!--Responsive nav Endeee -->
+                <div class="navigator">
+
+                </div>
+                <div class="notMoving">
+
+                </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12 sectionTwo">
+                    <div id="map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2520.4739297954834!2d7.852288915505371!3d50.822384868376396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47bea12fe04311bf%3A0x6471c28a2961da34!2sFriedrichsh%C3%BCttenstra%C3%9Fe+20%2C+57548+Kirchen+(Sieg)%2C+Germany!5e0!3m2!1sen!2s!4v1494190049990" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="col-sm-12 titleing ">
+                        <div class="inner">
+                            <h3 class="projects">KONTAKTE</h3>
+                        </div>
+                </div>
+            </div>
+            <div class="row tumbs">
+                <div class="col-sm-8 col-sm-offset-2 tumbanils">
+                    <div class="col-sm-3 first">
+                        <h2>Kontakt</h2>
+                        <p><strong>PRO-Bau GmbH</strong></p><br>
+
+                        <p><span class="glyphicon glyphicon-home"></span> Friedrichshuttenstrass 20,57548 Kirchen</p>
+
+                        <p><span class="glyphicon glyphicon-phone-alt"></span>02741- 93 78 54 </p>
+
+                        <p><span class="glyphicon glyphicon-send"></span>pro-bau.gmbh@t-online.de</p>
+                    </div>
+                    <div class="col-sm-9 first">
+                        <h2>Kontaktformular</h2>
+                        <form class="form-horizontal" role="form" method="post" action="index.php">
+                            <div class="form-group">
+                                <label for="name" class="col-sm-2 control-label">Name</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="name" name="name" placeholder="First & Last Name" value="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="col-sm-2 control-label">Email</label>
+                                <div class="col-sm-10">
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="example@domain.com" value="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="message" class="col-sm-2 control-label">Message</label>
+                                <div class="col-sm-10">
+                                    <textarea class="form-control" rows="4" name="message"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-10 col-sm-offset-2">
+                                    <input id="submit" name="submit" type="submit" value="Send" class="btn btn-primary">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-10 col-sm-offset-2">
+                                    <!-- Will be used to display an alert to the user-->
+                                </div>
+                            </div>
+                        </form>
+
+
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                {% include 'shared/footer.twig' %}
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,162 @@
+/* nav bar START*/
+nav{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:auto;
+    z-index:30;
+     
+}
+nav ul{
+    margin-top:2em !important;
+    float:left;
+    width:45%;
+    padding:0;
+    margin:0;
+    border-top:4px solid #fa5651;
+    align-content: center;
+    text-align: center;
+    background-color:#f2f2f2;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1), 0 1px 0 0 #ffffff, 0 -5px 0 0 #fa5651;
+    box-shadow: 2px 4px 5px rgba(136,136,136,0.4);
+}
+nav ul li{
+    display:inline-block;
+    list-style: none;
+
+    font-weight: 700;
+    cursor:pointer;
+}
+nav ul li a{
+    text-decoration: none;
+    padding:16px 30px 20px 30px;
+    color:inherit;
+    display:block;
+    width:100%;
+    height:100%;
+}
+nav ul li a:hover{
+    text-decoration:none;
+    color:inherit;
+    background-color: #f0f0f0
+}
+#fb{
+    padding:0 30px;
+}
+/* responsive Navigation  start*/
+.responsiveNav{
+    display:none;
+    width:100%;
+    height:auto;
+    position:fixed;
+    top:5%;
+    left:0;
+    z-index: 30;
+
+}
+.logo-container{
+    width: 21%;
+    float: left;
+    background-color: #fa5651;
+    padding: 1% 2%;
+}
+.logo-container img{
+    width:100%;
+    height:auto;
+}
+.button-container{
+    width:10%;
+    padding:1% 2%;
+    float:right;
+    background-color: #fa5651;
+}
+.button-container hr{
+    width:100%;
+    background-color: #fff;
+}
+
+/* responsive Navigation  end*/
+.test:before, .test:after {
+    content: "";
+    background: blue;
+    height: 40px;
+    transform: skewY(2deg);
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+.before{
+    text-align: right;
+}
+.after{
+    text-align: left;
+}
+.ljogo{
+    float:left;
+    padding: 12px;
+    width:10%;
+    height:auto;
+    background-color:#fa5651;
+    z-index: 10;
+    margin-top: 1em;
+}
+.ljogo img{
+    z-index: 10;
+    margin:auto;
+    width:80%;
+    height:auto;
+}
+.navigator{
+    background-color:#fa5651;
+    height:10px;
+    position:absolute;
+    z-index: 99;
+}
+.navigator:after {
+    content: "";
+    background: #fa5651;
+    height: 6px;
+    transform: skewY(4deg);
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    margin-top:5px;
+}
+.notMoving{
+    background-color:#fa5651;
+    height:10px;
+    position:absolute;
+    z-index: 99;
+}
+.notMoving:after {
+    content: "";
+    background: #fa5651;
+    height: 6px;
+    transform: skewY(4deg);
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    margin-top:5px;
+}
+
+.ljogo img{
+    width:100%;
+    height:auto;
+    margin-top:4px;
+    
+}
+/* nav bar END*/
+/* responsive bar START */
+
+@media screen and (max-width : 1000px){
+    nav{
+        display:none;
+    }
+    .responsiveNav{
+        display: block;
+    }
+}

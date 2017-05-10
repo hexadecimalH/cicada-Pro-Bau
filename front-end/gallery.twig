@@ -1,0 +1,175 @@
+{% include 'shared/header.twig' with {'style': style} %}
+    <body ng-app="proApp" ng-controller="proCtrl">
+        <div class="container-fluid" id="firstCont">
+            <div class="row">
+            {% include 'shared/navigation.twig' %}
+                <!--Responsive nav Endeee -->
+                <div class="navigator">
+
+                </div>
+                <div class="notMoving">
+
+                </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12 sectionTwo">
+                </div>
+                <div class="col-sm-12 titleing ">
+                    <div class="inner">
+                        <h3 class="projects">GALERIE</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row tumbs">
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <img src="" alt="" class="fotka">
+                            <a href="#" class="pointers" id="pointerR" ng-click="changePic('right')"></a>
+                            <a href="#" class="pointers" id="pointerL" ng-click="changePic('left')"></a>
+                            <div class="modal-footer">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                <div class="col-sm-8 col-sm-offset-2 col-xs-12  tumbanils">
+                    <div class="col-sm-4 thumb">
+                        <div class="thumbnail">
+                            <div>
+                                <a class="example-image-link" href="/front-end/img/galerie/photo1.jpg" data-lightbox="Pro-Bau Gallerie" data-title="Gallerie">
+                                    <img class="example-image" src="/front-end/img/galerie/photo1.jpg" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 thumb">
+                        <div class="thumbnail">
+                            <div>
+                                <a class="example-image-link" href="/front-end/img/galerie/photo2.jpg" data-lightbox="Pro-Bau Gallerie" data-title="Gallerie">
+                                    <img class="example-image" src="/front-end/img/galerie/photo2.jpg" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 thumb">
+                        <div class="thumbnail">
+                            <div>
+                                <a class="example-image-link" href="/front-end/img/galerie/photo3.jpg" data-lightbox="Pro-Bau Gallerie" data-title="Gallerie">
+                                    <img class="example-image" src="/front-end/img/galerie/photo3.jpg" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 thumb">
+                        <div class="thumbnail">
+                            <div>
+                                <a class="example-image-link" href="/front-end/img/galerie/photo4.jpg" data-lightbox="Pro-Bau Gallerie" data-title="Gallerie">
+                                    <img class="example-image" src="/front-end/img/galerie/photo4.jpg" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 thumb">
+                        <div class="thumbnail">
+                            <div>
+                                <a class="example-image-link" href="/front-end/img/galerie/photo12.jpg" data-lightbox="Pro-Bau Gallerie" data-title="Gallerie">
+                                    <img class="example-image" src="/front-end/img/galerie/photo12.jpg" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 thumb">
+                        <div class="thumbnail">
+                            <div>
+                                <a class="example-image-link" href="/front-end/img/galerie/photo6.jpg" data-lightbox="Pro-Bau Gallerie" data-title="Gallerie">
+                                    <img class="example-image" src="/front-end/img/galerie/photo6.jpg" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 thumb">
+                        <div class="thumbnail">
+                            <div>
+                                <a class="example-image-link" href="/front-end/img/galerie/photo7.jpg" data-lightbox="Pro-Bau Gallerie" data-title="Gallerie">
+                                    <img class="example-image" src="/front-end/img/galerie/photo7.jpg" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 thumb">
+                        <div class="thumbnail">
+                            <div>
+                                <a class="example-image-link" href="/front-end/img/galerie/photo8.jpg" data-lightbox="Pro-Bau Gallerie" data-title="Gallerie">
+                                    <img class="example-image" src="/front-end/img/galerie/photo8.jpg" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 thumb">
+                        <div class="thumbnail">
+                            <div>
+                                <a class="example-image-link" href="/front-end/img/galerie/photo9.jpg" data-lightbox="Pro-Bau Gallerie" data-title="Gallerie">
+                                    <img class="example-image" src="/front-end/img/galerie/photo9.jpg" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 thumb">
+                        <div class="thumbnail">
+                            <div>
+                                <a class="example-image-link" href="/front-end/img/galerie/photo10.jpg" data-lightbox="Pro-Bau Gallerie" data-title="Gallerie">
+                                    <img class="example-image" src="/front-end/img/galerie/photo10.jpg" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 thumb">
+                        <div class="thumbnail">
+                            <div>
+                                <a class="example-image-link" href="/front-end/img/galerie/photo11.jpg" data-lightbox="Pro-Bau Gallerie" data-title="Gallerie">
+                                    <img class="example-image" src="/front-end/img/galerie/photo11.jpg" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 thumb">
+                        <div class="thumbnail">
+                            <div>
+                                <a class="example-image-link" href="/front-end/img/galerie/photo13.jpg" data-lightbox="Pro-Bau Gallerie" data-title="Gallerie">
+                                    <img class="example-image" src="/front-end/img/galerie/photo13.jpg" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 thumb">
+                        <div class="thumbnail">
+                            <div>
+                                <a class="example-image-link" href="/front-end/img/galerie/photo14.jpg" data-lightbox="Pro-Bau Gallerie" data-title="Gallerie">
+                                    <img class="example-image" src="/front-end/img/galerie/photo14.jpg" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 thumb">
+                        <div class="thumbnail">
+                            <div>
+                                <a class="example-image-link" href="/front-end/img/galerie/photo15.jpg" data-lightbox="Pro-Bau Gallerie" data-title="Gallerie">
+                                    <img class="example-image" src="/front-end/img/galerie/photo15.jpg" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                {% include 'shared/footer.twig' %}
+            </div>
+        </div>
+        <script src="/front-end/js/lightbox.min.js"></script>
+    </body>
+</html>

@@ -1,0 +1,45 @@
+/*.ng-animate.ng-hide-remove {
+  line-height: 20px;
+  opacity: 1;
+  padding: 10px;
+  border: 1px solid black;
+  background: white;
+}
+
+.animate-show.ng-hide-add, .animate-show.ng-hide-remove {
+  transition: all linear 0.5s;
+}
+
+.ng-animate.ng-hide {
+  line-height: 0;
+  opacity: 0;
+  padding: 0 10px;
+}
+.ng-animate{
+
+}*/
+@keyframes appear {
+  from {
+    transform:translateX(-150%);
+  }
+  to {
+    transform:translateX(0);
+  }
+}
+@keyframes disappear {
+  from {
+    transform:translateX(0%);
+  }
+  to {
+    transform:translateX(150%);
+  }
+}
+.ng-enter{
+    transition:all .8s ease 0s;
+    transform:translateX(0);
+    animation: .8s appear;
+}
+.ng-leave{
+   display:none;
+}
+

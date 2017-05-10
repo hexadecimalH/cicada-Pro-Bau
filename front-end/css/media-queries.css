@@ -1,0 +1,25 @@
+@media screen and (max-width:860px){
+    .mobile-section-container{
+        display:block;
+    }
+    .slider{
+        transform: skewY(2deg);
+        overflow: hidden;
+        margin-top: -3%;
+    }
+    .carousel-inner{
+        transform: skewY(-2deg);
+        height:auto;
+        margin-bottom: -3%;
+    }
+    .sections-container{
+        display:none;
+    }
+    .content{
+        top:51%;
+        width:55%;
+    }
+    .content h1{
+        font-size:27px;
+    }
+}
