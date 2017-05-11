@@ -1,0 +1,106 @@
+{% include 'shared/header.twig' with {'style' : style} %}
+<body>
+    <div class="container background">
+        
+            <div class="row">
+                <div class="col-sm-12 headline">
+                    <img src="/front-end/img/Logos/NavLogoNovi.png" alt="">
+                </div>
+            </div>
+            <div class="row">
+                <ul class="nav nav-tabs">
+                    <li role="presentation" class="it"><a href="#" data-id="two" onclick="switchPannels(event)">Galerie Bilder</a></li>
+                    <li role="presentation" class="it"><a href="#" data-id="three" onclick="switchPannels(event)">Projecte</a></li>
+                </ul>
+            </div>
+            <div id="two" class="cont">
+                <div class="row">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Galerie Bilder</div>
+                        <div class="panel-body galleryPics">
+                            {% for picture in pictures %}
+                            <div class="col-sm-3 fixed">
+                                <img src="{{picture.url}}" alt="" class="pic">
+                                <img src="/front-end/img/x.png" alt="" class="closeX" data-id="{{picture.id}}">
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Bild Upload</div>
+                        <div class="panel-body upload-pannel">
+
+                        </div>
+                        <div class="panel-footer">
+                            <button class="btn btn-default upload">Bild Upload</button>
+                            <input type="file" class="hidden galleryUploader" id="upload" name="pics[]" multiple />
+                            <input type="text" class="hidden" name="url" id="urlNameGallery" requiered>
+                            <button class="btn btn-success save" id="save" >Speichern</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="three" class="cont">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Slider Builder</div>
+                    <div class="panel-body">
+                    <table>
+                        <th>Photo</th>
+                        <th>Titel</th>
+                        <th>Über</th>
+                        <th>Aktion</th>
+                        {% for project in projects %}
+                        <tr>
+                            <td>
+                                <div class="col-sm-3">
+                                    <img src="{{project.url}}" alt="" class="pic">
+                                </div>
+                            </td>
+                            <td>
+                                {{project.name}}
+                            </td>
+                            <td>
+                                {{project.about}}
+                            </td>
+                            <td>
+                                <button class="btn btn-default edit">Bearbeiten</button>
+                                <button class="btn btn-danger delete" data-id="{{project.id}}">Löschen</button>
+                                <button class="btn btn-default cancel">Annullieren</button>
+                                <button class="btn btn-success saveEdit" data-id="{{project.id}}">Speichern</button>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </table>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">Upload Slide Bild</div>
+                    <div class="panel-body">
+                        <div class="form-group imageContainer" >
+                            <div class="row holder">
+
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="title">Titel:</label>
+                            <input type="text" class="form-control" name="title" id="title" requiered>
+                        </div>
+                        <div class="form-group">
+                            <label for="about">Über:</label>
+                            <input type="text" class="form-control" name="about" id="about" requiered>
+                        </div>
+                    </div>
+                    <div class="panel-footer">
+                        <button class="btn btn-default upload">Upload Build</button>
+                        <input type="file" class="hidden" id="uploadSlider" name="pic" />
+                        <input type="text" class="hidden" name="url" id="urlNameProject" requiered>
+                        <button class="btn btn-success save" id="saveSlider" >Speichern</button>
+                    </div>
+                </div>
+            </div>
+            <script src="/front-end/js/admin-script.js"></script>
+    </body>
+</body>
+</html>

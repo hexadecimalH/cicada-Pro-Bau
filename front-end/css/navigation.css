@@ -149,6 +149,30 @@ nav ul li a:hover{
     margin-top:4px;
     
 }
+.listOfLink{
+    display:none;
+    width:100%;
+    background-color:#fff;
+    float:left;
+    color:#000;
+    text-align: center;
+    border-bottom:2px solid #fa5651;
+}
+.listOfLink ul{
+    list-style-type: none;
+    padding:0;
+    margin-bottom:0;
+}
+.listOfLink ul li a{
+    display:block;
+    color:#000;
+    padding:5px;
+    text-decoration: none;
+}
+.listOfLink ul li a:hover{
+    background-color:#fa5651;
+    color:#fff;
+}
 /* nav bar END*/
 /* responsive bar START */
 

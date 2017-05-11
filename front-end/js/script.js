@@ -33,5 +33,26 @@ $(document).ready(function(){
         $(staticNav).css({"width":$(el).innerWidth(),"left": objEl.left, "top":top});
     });
     $(window).trigger('resize');
+
+
+    var items = $('.not-skewed').children();
+    $(items).first().addClass('active');
+
+    $("#carousel-example-generic").swiperight(function() {  
+        $("#carousel-example-generic").carousel('prev');  
+    });  
+    $("#carousel-example-generic").swipeleft(function() {  
+        $("#carousel-example-generic").carousel('next');  
+    });  
+
+    $("#carousel-example-generic-mobile").swiperight(function() {  
+        $("#carousel-example-generic-mobile").carousel('prev');  
+    });  
+    $("#carousel-example-generic-mobile").swipeleft(function() {  
+        $("#carousel-example-generic-mobile").carousel('next');  
+    }); 
+});
+$('.button-container').on('click',function(){
+    $('.listOfLink').slideToggle()
 });
 

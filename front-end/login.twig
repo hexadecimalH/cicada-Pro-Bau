@@ -1,0 +1,36 @@
+{% include 'shared/header.twig' with { 'style' : style } %}
+
+<body>
+    <div class="container basic">
+        <div class="row">
+            <div class="col-xs-12 logo-container-login">
+                    <img src="/front-end/img/Logos/NavLogoNovi.png" alt="">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 login">
+                <form action="/login" method="POST">
+                    <div class="form-group">
+                        <label for="usr">Benutzername:</label>
+                        <input type="text" class="form-control" id="usr" name="username">
+                    </div>
+                    <div class="form-group">
+                        <label for="pwd">Passwort:</label>
+                        <input type="password" class="form-control" id="pwd" name="password">
+                    </div>
+                    <div class="col-xs-12">
+                        <button type="submit" class="btn btn-default">Einloggen</button>
+                    </div>
+                    {% if message != "" %}
+                    <div class="col-xs-12">
+                        <div class="alert alert-danger" role="alert">
+                            <p>{{message}}</p>
+                        </div>
+                    </div>
+                    {% endif %}
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html

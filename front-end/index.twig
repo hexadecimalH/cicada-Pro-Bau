@@ -36,7 +36,7 @@
                             </div>
                         </div>
                         <div class="item">
-                        <img src="/front-end/img/Slider/slider1.jpg" alt="...">
+                            <img src="/front-end/img/Slider/slider1.jpg" alt="...">
                             <div class="content">
                                 <div id="heading" class="heading">
                                     <h1>Ihr zuverlässiger Partner im Hochbau</h1>
@@ -74,7 +74,7 @@
                     <h3>Services</h3>
                     <div class="col-xs-12 unit-service-container">
                         <div class="col-xs-2 service-image-container">
-                            <img src="/front-end/img/services/service1.png" alt="">
+                            <img src="/front-end/img/services/service1.svg" alt="">
                         </div>
                         <div class="col-xs-10 service-about-container">
                             <p>
@@ -84,7 +84,7 @@
                     </div>
                     <div class="col-xs-12 unit-service-container">
                         <div class="col-xs-2 service-image-container">
-                            <img src="/front-end/img/services/service2.png" alt="">
+                            <img src="/front-end/img/services/service2.svg" alt="">
                         </div>
                         <div class="col-xs-10 service-about-container">
                             <p>
@@ -94,7 +94,7 @@
                     </div>
                     <div class="col-xs-12 unit-service-container">
                         <div class="col-xs-2 service-image-container">
-                            <img src="/front-end/img/services/service3.png" alt="">
+                            <img src="/front-end/img/services/service3.svg" alt="">
                         </div>
                         <div class="col-xs-10 service-about-container">
                             <p>
@@ -104,7 +104,7 @@
                     </div>
                     <div class="col-xs-12 unit-service-container">
                         <div class="col-xs-2 service-image-container">
-                            <img src="/front-end/img/services/service4.png" alt="">
+                            <img src="/front-end/img/services/service4.svg" alt="">
                         </div>
                         <div class="col-xs-10 service-about-container">
                             <p>
@@ -120,20 +120,42 @@
         <div class="container-fluid mobile-section-container">
             <div class="row full-fluid">
                 <div class="mobile-projects first">
-                
+                    <h4>Project 1</h4>
                 </div>
                 <div class="mobile-projects second">
-                
+                    <h4>Project 2</h4>
                 </div>
                 <div class="mobile-projects third">
-                
+                    <h4>Project 3</h4>
                 </div>
                 <div class="mobile-projects fourth">
-                
+                    <h4>Project 4</h4>
                 </div>
             </div>
         </div>
         <!-- mobile PROJECTS PART END-->
+        <!-- mobile Gallery PART START -->
+        <div class="container-fluid mobile-section-container gallery-mobile">
+            <div class="row">
+                <h3>Gallerie</h3>
+                <div class="col-xs-12">
+                    <div class="gallery-container">
+                        <div id="carousel-example-generic-mobile" class="carousel slide" data-ride="carousel">
+                            <!-- Wrapper for slides -->
+                            <div class="carousel-inner not-skewed" role="listbox">
+                            {% for picture in pictures %}
+                                <div class="item">
+                                    <img src="{{picture.url}}" alt="...">
+                                </div>
+                            {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- mobile GALLERY PART END-->
+         <!-- mobile TEAM PART -->
         <div class="container-fluid mobile-section-container">
             <div class="row">
                 <div class="col-xs-10 col-xs-offset-1 team-mobile-section">
@@ -153,6 +175,8 @@
                 </div>
             </div>
         </div>
+         <!-- mobile TEAM PART END -->
+          <!-- mobile CONTACT PART -->
         <div class="container-fluid mobile-section-container">
             <div class="row">
                 <div class="col-xs-12 mobile-contact-container">
@@ -187,27 +211,27 @@
                         </div>
                         <div class="col-xs-12">
                             <h4>Send us a message</h4>
-                            <div class="col-xs-12">
+                            <div class="col-xs-12 contact-width">
                                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                                     <input class="mdl-textfield__input" type="text" id="sample3">
                                     <label class="mdl-textfield__label" for="sample3">Name...</label>
                                 </div>
                             </div>
-                            <div class="col-xs-12">
+                            <div class="col-xs-12 contact-width">
                                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                                     <input class="mdl-textfield__input" type="email" id="sample3">
                                     <label class="mdl-textfield__label" for="sample3">Email...</label>
                                 </div>
                             </div>
-                            <div class="col-xs-12">
+                            <div class="col-xs-12 contact-width">
                                 <div class="mdl-textfield mdl-js-textfield">
                                     <textarea class="mdl-textfield__input" type="text" rows= "3" id="sample5" ></textarea>
                                     <label class="mdl-textfield__label" for="sample5">Your message...</label>
                                 </div>
                             </div>
-                            <div class="col-xs-12">
+                            <div class="col-xs-12 buttonche">
                                 <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
-                                    Button
+                                    Send Message
                                 </button>
                             </div>
                         </div>
@@ -222,6 +246,7 @@
                 </div>
             </div>
         </div>
+         <!-- mobile CONTACT PART END -->
         <div class="container-fluid">
             <div class="row services sections-container">
               <div class="col-sm-12 secs">

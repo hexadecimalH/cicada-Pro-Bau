@@ -1,0 +1,21 @@
+html, body {
+    height: 100%;
+    background-color:#fa5651;
+}
+.fill-height {
+    min-height: 100%;
+    height:auto !important; /* cross-browser */
+    height: 100%; /* cross-browser */
+    position:relative;
+}
+.logo-container-login{
+    width: 100%;
+    margin: auto;
+}
+.logo-container-login img{
+    display:block;
+    margin:auto;
+}
+.basic{
+    margin:10% 5%;
+}

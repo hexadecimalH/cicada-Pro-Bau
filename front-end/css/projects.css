@@ -261,6 +261,10 @@ body{
 .titleing{
     margin-top: -8%;
 }
+.notfound{
+    display: block;
+    margin: auto;
+}
 .inner{
     border-top:5px solid #fff;
     position: relative;
@@ -277,7 +281,7 @@ body{
 .inner:after{
     content: " ";
     background: #fff;
-    height:13em;
+    height:8em;
     transform: skewY(-2deg);
     transform-origin: 200%;
     display: block;

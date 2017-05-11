@@ -3,6 +3,7 @@
 namespace ProBau\Controllers;
 
 use ProBau\Application;
+use ProBau\Services\MainService;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -12,13 +13,17 @@ class MainController
     /** @var \Twig_Environment $twig */
     private $twig;
 
-    public function __construct($twig)
+    public $mainservice;
+
+    public function __construct($twig, $mainService)
     {
         $this->twig = $twig;
+        $this->mainService = $mainService;
     }
 
     public function index(){
-        return $this->twig->render('index.twig', ['style' => 'style.css']);
+        $pictures = $this->mainService->getGalleryPictures();
+        return $this->twig->render('index.twig', ['style' => 'style.css', 'pictures' => $pictures]);
     }
 
     public function services(){
@@ -26,11 +31,13 @@ class MainController
     }
 
     public function projects(){
-        return $this->twig->render('projects.twig', ['style' => 'projects.css']);
+        $projects = $this->mainService->getProjects();
+        return $this->twig->render('projects.twig', ['style' => 'projects.css', 'projects' => $projects]);
     }
 
     public function gallery(){
-        return $this->twig->render('gallery.twig', ['style' => 'gallery.css']);
+        $pictures = $this->mainService->getGalleryPictures();
+        return $this->twig->render('gallery.twig', ['style' => 'gallery.css', 'pictures' => $pictures]);
     }
 
     public function impressum(){
@@ -40,5 +47,5 @@ class MainController
     public function contact(){
         return $this->twig->render('contact.twig', ['style' => 'contact.css']);
     }
-    
+
 }

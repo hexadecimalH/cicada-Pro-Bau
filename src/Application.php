@@ -6,20 +6,31 @@ namespace ProBau;
 use Twig_Environment;
 use Twig_Loader_Filesystem;
 use Twig_SimpleFunction;
-
+use ProBau\Services\MainService;
+use ProBau\Services\AdminService;
+use ProBau\Services\ImageStorageService;
+use ProBau\Libraries\ImageManipulationLibrary;
 
 class Application extends \Cicada\Application
 {
-    public function __construct()
+    public $domain;
+    public $protocol;
+    public $basePath;
+
+    public function __construct($configPath, $domain, $protocol)
     {
 
         parent::__construct();
+        $this->domain = $domain;
+        $this->protocol = $protocol;
+        $this->basePath = $configPath;
         // session_start();
-        // $this->setupEnvironment($domain);
-        // $this->configure($configPath, $environment);
-        // $this->setupServices();
+        $this->setupEnvironment($domain);
+        $this->configure($configPath.'/config/pro-bau/');
+        $this->setupLibraries();
+        $this->setupServices();
         $this->setupTwig();
-        // $this->configureDatabase($environment);
+        $this->configureDatabase();
         // $this->setupSessionContainer();
 
 //        $this->registerRaven();
@@ -28,16 +39,31 @@ class Application extends \Cicada\Application
     private function setupSessionContainer(){
         $this['user_id'] = null;
     }
-
-    private function setupServices() {
-        $this['logInService'] = function () {
-            return new LogInService();
+    
+    protected function setupLibraries(){
+        $this['imageManipualtionLibrary'] = function () {
+            return new ImageManipulationLibrary();
         };
     }
 
-    protected function configure($configPath, $environment) {
-        $this['config'] = function () use ($configPath, $environment) {
-            return new Configuration($configPath, $environment);
+    private function setupServices() {
+        $this['imageStorageService'] = function () {
+            return new ImageStorageService($this->domain, $this->protocol, $this->basePath, $this['imageManipualtionLibrary']);
+        };
+        $this['mainService'] = function () {
+            return new MainService();
+        };
+        $this['adminService'] = function () {
+            return new AdminService($this['imageStorageService']);
+        };
+        // $this['logInService'] = function () {
+        //     return new LogInService();
+        // };
+    }
+
+    protected function configure($configPath) {
+        $this['config'] = function () use ($configPath) {
+            return new Configuration($configPath);
         };
     }
 
@@ -45,9 +71,9 @@ class Application extends \Cicada\Application
         $this['domain'] = $domain;
     }
 
-    protected function configureDatabase($environment)
+    protected function configureDatabase()
     {
-        $dbConfig = $this['config']->getDbConfig($environment);
+        $dbConfig = $this['config']->getDbConfig();
         \ActiveRecord\Config::initialize(function (\ActiveRecord\Config $cfg) use ($dbConfig) {
             $cfg->set_model_directory('src/Models');
             $cfg->set_connections([

@@ -23,6 +23,8 @@
 
             </div>
             <div class="row tumbs">
+            {% if projects|length > 0 %}
+                {% for project in projects %}
                 <div class="col-sm-8 col-sm-offset-2 border">
                     <div class="col-sm-3 pic">
                         <img src="/front-end/img/projects/project1.jpg" alt="">
@@ -35,114 +37,10 @@
                         </p>
                     </div>
                 </div>
-                <div class="col-sm-8 col-sm-offset-2 border">
-                    <div class="col-sm-3 pic">
-                        <img src="/front-end/img/projects/project2.jpg" alt="">
-                    </div>
-                    <div class="col-sm-9">
-                        <h1>Title</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                             exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-sm-8 col-sm-offset-2 border">
-                    <div class="col-sm-3 pic">
-                        <img src="/front-end/img/projects/project3.jpg" alt="">
-                    </div>
-                    <div class="col-sm-9">
-                        <h1>Title</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                             exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-sm-8 col-sm-offset-2 border">
-                    <div class="col-sm-3 pic">
-                        <img src="/front-end/img/projects/project4.jpg" alt="">
-                    </div>
-                    <div class="col-sm-9">
-                        <h1>Title</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                             exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-sm-8 col-sm-offset-2 border">
-                    <div class="col-sm-3 pic">
-                        <img src="/front-end/img/projects/project5.jpg" alt="">
-                    </div>
-                    <div class="col-sm-9">
-                        <h1>Title</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                             exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-sm-8 col-sm-offset-2 border">
-                    <div class="col-sm-3 pic">
-                        <img src="/front-end/img/projects/project6.jpg" alt="">
-                    </div>
-                    <div class="col-sm-9">
-                        <h1>Title</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                             exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-sm-8 col-sm-offset-2 border">
-                    <div class="col-sm-3 pic">
-                        <img src="/front-end/img/projects/project7.jpg" alt="">
-                    </div>
-                    <div class="col-sm-9">
-                        <h1>Title</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                             exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-sm-8 col-sm-offset-2 border">
-                    <div class="col-sm-3 pic">
-                        <img src="/front-end/img/projects/project8.jpg" alt="">
-                    </div>
-                    <div class="col-sm-9">
-                        <h1>Title</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                             exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-sm-8 col-sm-offset-2 border">
-                    <div class="col-sm-3 pic">
-                        <img src="/front-end/img/projects/project9.jpg" alt="">
-                    </div>
-                    <div class="col-sm-9">
-                        <h1>Title</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                             exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-sm-8 col-sm-offset-2 border">
-                    <div class="col-sm-3 pic">
-                        <img src="/front-end/img/projects/project10.jpg" alt="">
-                    </div>
-                    <div class="col-sm-9">
-                        <h1>Title</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                             exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                        </p>
-                    </div>
-                </div>
+                {% endfor %}
+            {% else %}
+                <img src="/front-end/img/404.png" alt="" class="notfound">
+            {% endif %}
             </div>
         </div>
         <div class="container-fluid">

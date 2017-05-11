@@ -27,7 +27,7 @@ body{
     padding:0;
 }
 .service-image-container img{
-    width:50%;
+    width: 100%;
 }
 .unit-service-container{
     margin:2% 0;
@@ -38,10 +38,20 @@ body{
 }
 .full-fluid{
     padding:0;
+    border-bottom:2px solid #fa6556;
 }
 .mobile-projects{
-    padding:10% 0%;
+    padding-top:20%;
     background-size: 100% 100%;
+    transition: all .5s ease 0s;
+}
+.mobile-projects h4{
+    margin-bottom:0;
+    color:#fff;
+    transition:all .5s ease 0s;
+}
+.contact-width div{
+    width:100%;
 }
 .first{
     background:url('../img/Projecten/plavo1.jpg') no-repeat center;
@@ -83,10 +93,34 @@ body{
     padding:4% 0;
     z-index: 30;
 }
-
+.gallery-container{
+    width:80%;
+    margin:auto;
+}
+.gallery-mobile{
+    padding-bottom:5%;
+    background-color:#fa6556;
+}
+.gallery-mobile .row h3{
+    color:#fff;
+    text-align: center;
+}
+.not-skewed{
+    transform: skewY(0deg) !important;
+}
+.mobile-projects:hover{
+    padding-top:0;
+    padding:20% 0%;
+}
+.buttonche{
+    text-align: center;
+}
 .mobile-contact-wrapper{
     transform: skewY(2deg);
     color:#fff;
+}
+.mobile-contact-wrapper h3{
+    text-align: center;
 }
 input.mdl-textfield__label{
     border-color:#fff;
