@@ -1,8 +1,8 @@
 {% include 'shared/header.twig' with {'style': style} %}
-    <body ng-app="proApp" ng-controller="proCtrl">
+    <body>
         <div class="container-fluid" id="firstCont">
             <div class="row">
-                {% include 'shared/navigation.twig' %}
+                {% include 'shared/navigation.twig' with {'style':style} %}
                 <!--Responsive nav Endeee -->
                 <div class="navigator">
 
@@ -69,7 +69,7 @@
                 </div>
             </div>
             <!-- mobile Version PART -->
-            <div class="row mobile-section-container">
+            <div class="row mobile-section-container" id="services-mobile">
                 <div class="col-xs-10 col-xs-offset-1 mobile-services">
                     <h3>Services</h3>
                     <div class="col-xs-12 unit-service-container">
@@ -117,7 +117,7 @@
             <!-- mobile Version PART END-->
         </div>
          <!-- mobile PROJECTS PART -->
-        <div class="container-fluid mobile-section-container">
+        <div class="container-fluid mobile-section-container" id="projects-mobile">
             <div class="row full-fluid">
                 <div class="mobile-projects first">
                     <h4>Project 1</h4>
@@ -135,10 +135,10 @@
         </div>
         <!-- mobile PROJECTS PART END-->
         <!-- mobile Gallery PART START -->
-        <div class="container-fluid mobile-section-container gallery-mobile">
+        <div class="container-fluid mobile-section-container gallery-mobile" id="gallery-mobile">
             <div class="row">
                 <h3>Gallerie</h3>
-                <div class="col-xs-12">
+                <div class="col-xs-12 gall">
                     <div class="gallery-container">
                         <div id="carousel-example-generic-mobile" class="carousel slide" data-ride="carousel">
                             <!-- Wrapper for slides -->
@@ -177,7 +177,7 @@
         </div>
          <!-- mobile TEAM PART END -->
           <!-- mobile CONTACT PART -->
-        <div class="container-fluid mobile-section-container">
+        <div class="container-fluid mobile-section-container" id="mobile-contact">
             <div class="row">
                 <div class="col-xs-12 mobile-contact-container">
                     <div class="col-xs-10 col-xs-offset-1 mobile-contact-wrapper">
@@ -213,19 +213,19 @@
                             <h4>Send us a message</h4>
                             <div class="col-xs-12 contact-width">
                                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="text" id="sample3">
+                                    <input class="mdl-textfield__input" type="text" id="name">
                                     <label class="mdl-textfield__label" for="sample3">Name...</label>
                                 </div>
                             </div>
                             <div class="col-xs-12 contact-width">
                                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="email" id="sample3">
+                                    <input class="mdl-textfield__input" type="email" id="mail">
                                     <label class="mdl-textfield__label" for="sample3">Email...</label>
                                 </div>
                             </div>
                             <div class="col-xs-12 contact-width">
                                 <div class="mdl-textfield mdl-js-textfield">
-                                    <textarea class="mdl-textfield__input" type="text" rows= "3" id="sample5" ></textarea>
+                                    <textarea class="mdl-textfield__input" type="text" rows= "3" id="content" ></textarea>
                                     <label class="mdl-textfield__label" for="sample5">Your message...</label>
                                 </div>
                             </div>
@@ -398,5 +398,7 @@
                 {% include 'shared/footer.twig' %}
             </div>
         </div>
+        <script src="/front-end/js/scroll.js"></script>
+        <script src="/front-end/js/sendMail.js"></script>
     </body>
 </html>

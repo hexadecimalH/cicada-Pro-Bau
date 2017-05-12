@@ -48,4 +48,14 @@ class MainController
         return $this->twig->render('contact.twig', ['style' => 'contact.css']);
     }
 
+    public function sendMail(Application $app, Request $request){
+        $name = $request->request->get('name');
+        $mail = $request->request->get('mail');
+        $content = $request->request->get('content');
+
+        $isSent = $this->mainService->sendMail($name, $mail, $content); 
+        
+        return new Response($isSent);
+    }
+
 }

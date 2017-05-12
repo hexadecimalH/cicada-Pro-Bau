@@ -56,3 +56,6 @@ $('.button-container').on('click',function(){
     $('.listOfLink').slideToggle()
 });
 
+$('.scroll-smooth').on('click',function(){
+    $('.listOfLink').slideToggle();
+});

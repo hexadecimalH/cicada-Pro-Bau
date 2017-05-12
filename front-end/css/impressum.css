@@ -401,5 +401,48 @@ body{
 .leistungen p{
     text-align: justify;        
 }
-
 /* section there END */
+.mobile-container-impressum{
+    display:none;
+}
+.mobile-background-container{
+    background:-webkit-linear-gradient(rgba(0,0,0,0), #fff), url("/front-end/img/gallery.jpg");
+    background:-moz-linear-gradient( rgba(0,0,0,0), #fff), url("/front-end/img/gallery.jpg");
+    background:-o-linear-gradient( rgba(0,0,0,0), #fff), url("/front-end/img/gallery.jpg");
+    background:linear-gradient(rgba(0,0,0,0), #fff), url("/front-end/img/gallery.jpg");
+    padding: 29% 0;
+    background-size: 100% 100%;
+}
+
+.impressum p{
+    text-align: justify;
+}
+.underline{
+    border-bottom:2px solid #fa5651;
+}
+.registry{
+    text-align:right;
+}
+.overline{
+    border-top:2px solid #fa5651;
+}
+.mobile-footer-container{
+    padding:0;
+}
+.picture-holder{
+    background:-webkit-linear-gradient(rgba(0,0,0,0), #2c3147), url("../img/construction.png");
+    background:-moz-linear-gradient( rgba(0,0,0,0), #2c3147), url("../img/construction.png");
+    background:-o-linear-gradient( rgba(0,0,0,0),#2c3147 ), url("../img/construction.png");
+    background:linear-gradient(rgba(0,0,0,0), #2c3147), url("../img/construction.png");
+    padding:10% 0;
+    background-size:100% 100%;
+}
+.footer-logo-container{
+    background-color:#2c3147;
+    margin:auto;
+}
+.footer-logo-container img{
+    display:block;
+    margin:auto;
+    padding:2% 0;
+}

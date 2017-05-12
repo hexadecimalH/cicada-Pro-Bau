@@ -30,6 +30,7 @@ $app->get('/leistungen',        [ $mainController, 'services']);
 $app->get('/galerie',           [ $mainController, 'gallery']);
 $app->get('/kontakt',           [ $mainController, 'contact']);
 $app->get('/impressum',         [ $mainController, 'impressum']);
+$app->post('/send-mail',         [ $mainController, 'sendMail']);
 
 
 //Login Controller Routes

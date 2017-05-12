@@ -40,37 +40,72 @@
                         <hr>
                     </div>
                     <div class="listOfLink">
+                    {% if style == 'style.css' %}
                         <ul>
                             <li>
-                                <a href="">
+                                <a href="#slider" class="scroll-smooth">
                                     Home
                                 </a>
                             </li>
                             <li>
-                                <a href="">
+                                <a href="#services-mobile" class="scroll-smooth">
                                     Leistungen
                                 </a>
                             </li>
                             <li>
-                                <a href="">
+                                <a href="#projects-mobile" class="scroll-smooth">
                                     Projecten
                                 </a>
                             </li>
                             <li>
-                                <a href="">
+                                <a href="#gallery-mobile" class="scroll-smooth">
                                     Gallerie
                                 </a>
                             </li>
                             <li>
-                                <a href="">
+                                <a href="#mobile-contact" class="scroll-smooth">
                                     Kontakt
                                 </a>
                             </li>
                             <li>
-                                <a href="">
+                                <a href="/impressum" class="scroll-smooth">
                                     Impressum
                                 </a>
                             </li>
                         </ul>
+                        {% else %}
+                                                <ul>
+                            <li>
+                                <a href="/" class="scroll-smooth">
+                                    Home
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/" class="scroll-smooth">
+                                    Leistungen
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/" class="scroll-smooth">
+                                    Projecten
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/" class="scroll-smooth">
+                                    Gallerie
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/" class="scroll-smooth">
+                                    Kontakt
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/impressum" class="scroll-smooth">
+                                    Impressum
+                                </a>
+                            </li>
+                        </ul>
+                        {% endif %}
                     </div>
                 </div>

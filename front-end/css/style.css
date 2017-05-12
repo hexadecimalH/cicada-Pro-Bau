@@ -94,7 +94,7 @@ body{
     z-index: 30;
 }
 .gallery-container{
-    width:80%;
+    width:100%;
     margin:auto;
 }
 .gallery-mobile{
@@ -143,6 +143,9 @@ label.mdl-textfield__label {
 .footer-logo-container img{
     display:block;
     margin:auto;
+}
+.gall{
+    padding:0;
 }
 /* nav bar responsive START*/
 @media screen and (max-width: 1600px) {

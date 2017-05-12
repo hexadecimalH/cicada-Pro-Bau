@@ -26,4 +26,10 @@
         margin-top: .5em;
         margin-bottom: .5em;
     }
+    .desktop{
+        display:none;
+    }
+    .mobile-container-impressum{
+        display:block;
+    }
 }
