@@ -26,6 +26,9 @@ body{
 .service-image-container{
     padding:0;
 }
+.text-inthumb{
+    text-align: justify;
+}
 .service-image-container img{
     width: 100%;
 }
